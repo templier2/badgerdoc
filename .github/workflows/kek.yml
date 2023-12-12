@@ -53,4 +53,5 @@ jobs:
 
     - shell: bash
       run: |
+        cp .env.example .env
         sudo docker-compose -f docker-compose-dev.yaml up -d
