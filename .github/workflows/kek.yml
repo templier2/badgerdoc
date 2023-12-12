@@ -33,6 +33,10 @@ on:
         description: 'The name of the BRANCH'     
         required: true
         default: 'main'
+      runnerLabel:
+        description: 'The label of a runner'     
+        required: true
+        default: 'kek'
 
 permissions:
   contents: read
@@ -40,7 +44,7 @@ permissions:
 jobs:
   deploy:
     name: bld
-    runs-on: kek
+    runs-on: ${{ inputs.runnerLabel }}
     environment: production
 
     steps:
