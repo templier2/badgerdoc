@@ -26,9 +26,13 @@
 
 name: Build and Start on EC2
 
-on:
-  push:
-    branches: [ "main" ]
+on: 
+  workflow_dispatch:
+    inputs:
+      branchName:
+        description: 'The name of the BRANCH'     
+        required: true
+        default: 'main'
 
 permissions:
   contents: read
