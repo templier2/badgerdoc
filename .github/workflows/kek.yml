@@ -53,4 +53,4 @@ jobs:
 
     - shell: bash
       run: |
-        docker-compose up -d -f docker-compose-dev.yaml
+        sudo docker-compose -f docker-compose-dev.yaml up -d
